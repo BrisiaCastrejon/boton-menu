@@ -1,0 +1,52 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: #414950;
+}
+nav{
+  margin: 150px auto;
+  width: 450px;
+  height: 450px;
+}
+#check{
+  display: none;
+}
+#central{
+  cursor: pointer;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  margin: 150px 150px;
+  z-index: 1;
+}
+#central img{
+  width: 100%;
+  transition: all .4s ease-in-out;
+}
+.link{
+  position: absolute;
+  margin: 195px 195px;
+  width: 60px;
+  height: 60px;
+  transition: all .1s ease-in-out;
+}
+#check:checked ~ a #link_1 {
+  transform: translateY(-500px);
+}
+#check:checked ~ a #link_2 {
+  transform: translateY(-400px);
+  transition-delay: .1s;
+}
+#check:checked ~ a #link_3 {
+  transform: translateY(-300px);
+  transition-delay: .2s;
+}
+#check:checked ~ a #link_4 {
+  transform: translateY(-200PX);
+  transition-delay: .3s;
+}
+#check:checked ~ #central img {
+  transform: rotate(45deg);
+}

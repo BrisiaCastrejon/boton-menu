@@ -1,0 +1,86 @@
+body {
+  background: #f3f3f3;
+}
+.button, .nav{
+  position: absolute;
+}
+.menu-button{
+  width: 100%;
+}
+.menu{
+  position: fixed;
+  margin: auto;
+  bottom: 15%;
+  left: 90%;
+  margin-left: -20px;
+}
+#toggle{
+  display: none;
+}
+.button{
+  z-index: 999;
+  width: 60px;
+  height:60px;
+  /*background: gray;*/
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+.button:before, .button:after{
+position: absolute;
+}
+.nav{
+  transform: translateY(-10%);
+  opacity: 0;
+  bottom: 30px;
+  left: -100px;
+  transition: all 0.5s ease-in-out;
+  width: 150px;
+  border-radius: 15px;
+  background-color: gray;
+  transform: translateY(0%);
+}
+.nav a{
+  text-align: center;
+  display: block;
+  margin: 20px 0;
+  color: white;
+  text-decoration: none;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+ }
+ .link{
+   width: 30%;
+ }
+#toggle:checked~.nav{
+  opacity: 1;
+  transform: translateY(10%);  
+}
+#toggle:checked~.button{
+  transform: rotate(135deg);
+  box-shadow: 0 0 0 0 transparent;
+}
+/*secciones*/
+
+@media (max-width: 575.98px) { 
+  .header-welcome{
+    width: 100vw;
+    height: 200px;  
+  }
+  .menu{
+    left: 85%;
+  }
+  .centrado{
+    text-align: center;
+  }
+  table{
+    width: 100vw;   
+    border-collapse: collapse;
+  }
+  table td {
+    padding: 5px;
+  }
+  table td i {
+    width: 50px;
+  } 
+ }
